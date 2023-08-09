@@ -2,14 +2,16 @@ const themes = [
     { // Light theme
         text_color: "#000000",
         bg_color: "#FFFFFF",
-        navbar_color: "#6361f8",
-        sidebar_color: "#8381ff",
+        navbar_color: "#7a78ff",
+        sidebar_color: "#a8a6ff",
+        accent_color: "#a5f4ff",
     },
     { // Dark theme
         text_color: "#FFFFFF",
         bg_color: "#181818",
         navbar_color:"#2f2b94",
-        sidebar_color:"#3c3ba4"
+        sidebar_color:"#3c3ba4",
+        accent_color: "#0991a4"
     }
 ];
 var currentThemeIndex = 0;

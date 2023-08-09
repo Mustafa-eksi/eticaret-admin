@@ -6,13 +6,21 @@ import { Component } from 'react';
 import { switchTheme } from './theme';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ctx: 0
+    };
+  }
   render() {
     return (
       <div className="App">
         <Header switchTheme={()=>{switchTheme(); this.setState({})}}></Header>
         <div className='Row'>
-          <Sidebar></Sidebar>
-          <PageContent></PageContent>
+          <Sidebar changeContext={(ctxIndex)=>{
+            this.setState({ctx:ctxIndex});
+          }} ctx={this.state.ctx}></Sidebar>
+          <PageContent ctx={this.state.ctx}></PageContent>
         </div>
       </div>
     );
