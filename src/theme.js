@@ -14,7 +14,7 @@ const themes = [
         accent_color: "#0991a4"
     }
 ];
-var currentThemeIndex = 0;
+var currentThemeIndex = 1;
 export function getTheme() {
     return themes[currentThemeIndex];
 }

@@ -1,12 +1,20 @@
 import { Component } from 'react';
 import './general.css';
 import { getTheme } from './theme';
+import { InputGroup, Form } from 'react-bootstrap';
 
 class AddProduct extends Component {
     render() {
         return (
             <div>
-                Add product
+                <InputGroup className='p-3'>
+                    <InputGroup.Text id="urunadiyazi">Ürün adı</InputGroup.Text>
+                    <Form.Control
+                    placeholder="İsim"
+                    aria-label="İsim"
+                    aria-describedby="urunadiyazi"
+                    />
+                </InputGroup>
             </div>
         );
     }
@@ -23,8 +31,8 @@ class EditProduct extends Component {
 }
 
 const contexts = [
-    ()=>{return(<AddProduct></AddProduct>)},
-    ()=>{return(<EditProduct></EditProduct>)}
+    ()=><AddProduct></AddProduct>,
+    ()=><EditProduct></EditProduct>
 ]
 class PageContent extends Component {
     
